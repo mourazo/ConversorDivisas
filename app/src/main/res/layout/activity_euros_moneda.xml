@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".eurosMoneda">
+
+    <ImageView
+        android:id="@+id/sequo_img"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="13dp"
+        android:layout_marginBottom="27dp"
+        app:layout_constraintBottom_toTopOf="@+id/tv_resultado2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@mipmap/monedas" />
+
+    <TextView
+        android:id="@+id/tv_resultado2"
+        android:layout_width="96dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="11dp"
+        android:text="MONEDA"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/sp_monOr"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sequo_img" />
+
+    <TextView
+        android:id="@+id/tv_moneda"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="23dp"
+        android:layout_marginLeft="23dp"
+        android:layout_marginEnd="22dp"
+        android:layout_marginRight="22dp"
+        android:layout_marginBottom="73dp"
+        android:text="CANTIDAD"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/t_resultado"
+        app:layout_constraintEnd_toStartOf="@+id/t_cantidad"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sp_monOr" />
+
+    <Button
+        android:id="@+id/boton_convertir"
+        style="@style/Widget.AppCompat.Button"
+        android:layout_width="221dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="45dp"
+        android:onClick="convertirDivisas"
+        android:text="convertir"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/t_resultado" />
+
+    <EditText
+        android:id="@+id/t_cantidad"
+        android:layout_width="0dp"
+        android:layout_height="70dp"
+        android:layout_marginEnd="22dp"
+        android:layout_marginRight="22dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintBaseline_toBaselineOf="@+id/tv_moneda"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tv_moneda" />
+
+    <Spinner
+        android:id="@+id/sp_monOr"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="22dp"
+        android:layout_marginLeft="22dp"
+        android:layout_marginEnd="22dp"
+        android:layout_marginRight="22dp"
+        android:layout_marginBottom="71dp"
+        android:spinnerMode="dialog"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toTopOf="@+id/tv_moneda"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_resultado2" />
+
+    <TextView
+        android:id="@+id/t_resultado"
+        android:layout_width="0dp"
+        android:textAlignment="center"
+        android:layout_height="0dp"
+        android:layout_marginStart="33dp"
+        android:layout_marginLeft="33dp"
+        android:layout_marginEnd="33dp"
+        android:layout_marginRight="33dp"
+        android:layout_marginBottom="63dp"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/boton_convertir"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_moneda" />
+</androidx.constraintlayout.widget.ConstraintLayout>
